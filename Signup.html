@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome </title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        .loader {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          margin: 0 auto;
+        }
+        .loader::before,
+        .loader::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width:50%;
+          height: 50%;
+          border-radius: 50%;
+        }
+        .loader::before {
+          border: 8px solid #ccc;
+          border-top-color: #333;
+          animation: spin 2s linear infinite;
+        }
+        .loader::after {
+          border: 8px solid #ccc;
+          border-top-color: #555;
+          animation: spin-reverse 2s linear infinite;
+        }
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spin-reverse {
+          to {
+            transform: rotate(-360deg);
+          }
+        }
+      </style>
+      </head>
+<body>
+  <form>
+    <h2>Sign Up</h2>
+        <div></div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <button id="signup-btn">Sign Up</button>
+        </form>
+      </div>
+      <img src="https://o.remove.bg/downloads/08463932-ff2b-46f8-bd98-c9d54c7806f7/image-removebg-preview__1_-removebg-preview.png">
+      <script>
+        const signupBtn = document.getElementById("signup-btn");
+        signupBtn.addEventListener("click", function() {
+          const loader = document.createElement("div");
+          loader.classList.add("loader");
+          this.parentNode.insertBefore(loader, this);
+          this.style.display = "none";
+          
+          // simulate a delay before redirecting to the next page
+          setTimeout(function() {
+            window.location.href = "index.html";
+          }, 100);
+        });
+      </script>
+      </body>
+</html>

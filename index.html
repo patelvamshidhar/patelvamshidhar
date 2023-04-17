@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
-<body> 
-    <form>
-        <div>
-            <p>Login</p>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-btn">Login</button>
+                
+                <a href="Forget.html" style="padding-left: 160px; margin-top: 10px; color:black">Forget Password?</a>
+                <p style="padding-left: 140px;">OR</p>
+                    <button style="padding-top:10px; margin-top: 10px;color:white;"><a href="Signup.html"> Create a new account</a>
+                    </button>
+            </form>
         </div>
-        <div style="margin-right: 500px;padding-bottom:5px;">
-		<label for="username">Username:</label>
-    </div>
-		<div style="padding: 10px;">
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div style="margin-right: 500px;padding-bottom:5px;">
-		<label for="password">Password:</label>
-    </div style="padding: 10px;">
-		<input type="password" id="password" name="password" required>
-		<button type="submit">Login</button>
-        <div style="padding: 2px; margin-top : 15px;">
-            <a href="" style="margin-left:200px">Forget Password ?</a>
-            </div>
-            <div style="padding:2px;margin-right:200px;">
-                <a href="" >Create a new account</a>
-            </div>
-    
-	</form>
+        <script src="first.js"></script>
 </body>
-</html>
 </html>
